@@ -19,7 +19,29 @@ using namespace std;
 //Like PI, e, Gravity, or conversions
 
 //Function Prototypes Here
-
+int split(int split){
+    bool split = false;
+    int newHand1, newHand2;
+    int newsum1, newsum2;
+    
+    PLcard1 = newHand1;
+    PLcard2 = newHand2;
+    
+    while(PLcard1 == PLcard2){
+        cout << "Would you like to split?\n";
+        cout << "1. Yes\n";
+        cout << "2. No\n";
+        cin >> split;
+        
+        if(split != 2){
+            cout << newhand1 << "\t\t" << newhand2;
+            cout << "\t\t\t" << "Your 1st Hand: " << newhand1 << endl;
+            cout << "\t\t\t" << "Your 2nd Hand: " << newHand2 << endl;
+        }
+        
+    }
+    return split;
+}
 //Program Execution Begins Here
 int main()
 {
@@ -27,7 +49,7 @@ int main()
     unsigned seed = time(0);
     srand(seed);
     int selection = 0;
-    int deal=0, hit=0, stand=0, surrender=4, split=3;
+    int deal=0, hit=0, stand=0, hand=0;
     float PLcard1,PLcard2,PLcard3,PLcard4,PLcard5,PLcard6;
     float DLcard1,DLcard2,DLcard3;
     float PLsum1,PLsum2,PLsum3,PLsum4,PLsum5
@@ -96,6 +118,9 @@ int main()
                 cout << "New Card: " << PLcard3 << endl;
                 cout << "\t\t\t" << "Your Hand: " << PLsum2 << endl;
                 
+                if(PLcard1 = PLcard2){
+                    int split(hand);
+                }
                 //Displays and calculates player's card value 
                 if(PLsum2 >= 22){
                     cout << "BUST!" << endl;
